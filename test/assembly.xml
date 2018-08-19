@@ -1,0 +1,31 @@
+<assembly>
+    <id>bin</id>
+    <formats>
+        <format>tar.gz</format>
+    </formats>
+    <dependencySets>
+        <dependencySet>
+            <useProjectArtifact>true</useProjectArtifact>
+            <outputDirectory>lib</outputDirectory>
+            <scope>runtime</scope>
+	    <!--<includes>
+                <include>${project.groupId}:${project.artifactId}</include>
+                <include>com.alibaba.otter:canal.client</include>
+                <include>com.alibaba.otter:canal.common</include>
+                <include>com.alibaba.otter:canal.protocol</include>
+	    </includes>-->
+        </dependencySet>
+    </dependencySets>
+    <fileSets>
+        <fileSet>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>README.md</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>deploy</directory>
+            <outputDirectory>/</outputDirectory>
+        </fileSet>
+    </fileSets>
+</assembly>
